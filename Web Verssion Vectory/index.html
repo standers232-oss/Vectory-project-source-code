@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexus Mass Web</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#7c3aed" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-logo">N</div>
+        <div>
+          <h1>Nexus Mass</h1>
+          <p id="meLine">Web messenger</p>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button id="newChatBtn" class="soft-btn">🔎 Найти</button>
+        <button id="settingsBtn" class="soft-btn">⚙ Настройки</button>
+      </div>
+
+      <div class="chat-list" id="chatList"></div>
+    </aside>
+
+    <main class="main" id="main"></main>
+  </div>
+
+  <template id="authTemplate">
+    <section class="auth-screen">
+      <div class="auth-card glass">
+        <div class="big-logo">✦</div>
+        <h2 id="authTitle">Вход</h2>
+        <p id="authSub">Войдите в Nexus Mass</p>
+        <div class="form-stack" id="authFields"></div>
+        <button id="authSubmit" class="primary-btn">Войти</button>
+        <button id="authSwitch" class="link-btn">Создать аккаунт</button>
+      </div>
+    </section>
+  </template>
+
+  <template id="emptyTemplate">
+    <section class="empty-state">
+      <div class="empty-card glass">
+        <div class="empty-icon">💬</div>
+        <h2>Выберите чат</h2>
+        <p>Найдите пользователя по юзернейму и начните личную переписку.</p>
+        <button class="primary-btn" id="emptySearchBtn">Найти пользователя</button>
+      </div>
+    </section>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
